@@ -1,12 +1,16 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import alpinejs from '@astrojs/alpinejs';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    alpinejs()
-  ]
+  integrations: [tailwind(), alpinejs()],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

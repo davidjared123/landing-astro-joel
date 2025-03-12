@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Newsletter from "../components/Newsletter.astro";
+import Footer from "../components/Footer.astro";
+
+import { getI18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = getI18n({ currentLocale });
+
+const { en, es } = {
+  en: "Testing in ENGLISH",
+  es: "Probando en ESPAÑOL",
+};
+---
+
+<Layout title={i18n.SEO_TITLE}>
+  <Header
+    title={i18n.SEO_TITLE}
+    home={i18n.NAVBAR_HOME}
+    contact={i18n.NAVBAR_CONTACT}
+    button={i18n.NAVBAR_BUTTON_GET_STARTED}
+  />
+  <main>
+    <Hero
+      name={i18n.SEO_TITLE}
+      title={i18n.HOME_TITLE}
+      description={i18n.HOME_DESCRIPTION}
+      button={i18n.CONTACT_TITLE}
+    />
+    <Features FEATURES={i18n.FEATURES} />
+    <Testimonials />
+    <Newsletter />
+  </main>
+  <Footer />
+</Layout>
