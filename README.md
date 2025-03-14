@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Astro Sassify Template
+# Astro 
 
 A modern, responsive Astro template with Tailwind CSS and Alpine.js integration. This template provides a solid foundation for building fast, SEO-friendly websites with a clean design system.
 
