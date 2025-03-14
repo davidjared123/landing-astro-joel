@@ -1,10 +1,15 @@
 {
+    "LANG": "/es/",
+    "set_LANG": "/",
+    "set_lang": "English",
     "SEO_TITLE": "Joel's Loan",
     "SEO_DESCRIPTION": "Joel's Loan es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
     "SEO_KEYWORDS": "préstamos, préstamos personales, préstamos rápidos, préstamos online, préstamos en efectivo, préstamos en el acto, préstamos con veraz, préstamos sin veraz, préstamos con recibo de sueldo, préstamos sin recibo de sueldo, préstamos con DNI, préstamos sin DNI, préstamos con tarjeta de crédito, préstamos sin tarjeta de crédito, préstamos con CBU, préstamos sin CBU, préstamos con embargo, préstamos sin embargo, préstamos con monotributo, préstamos sin monotributo, préstamos con pensiones, préstamos sin pensiones, préstamos con jubilaciones, préstamos sin jubilaciones, préstamos con planes sociales, préstamos sin planes sociales, préstamos con asignaciones, préstamos sin asignaciones",
     "HOME_TITLE": "Préstamos personales en el acto",
     "HOME_DESCRIPTION": "es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
-    "FEATURES_TITLE": "Características",
+     "HOME_SUBTITLE": "diseñado para ayudarte a crear un sitio web profesional y atractivo para tu negocio.",
+    "FEATURES_TITLE": "Lo que necesitas para tener éxito",
+    "FEATURES_SUBTITLE": "Funciones potentes",
     "FEATURES_DESCRIPTION": "Joel's Loan es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
     "FEATURES":{
         "FEATURES_ITEM_1": "Préstamos personales en el acto",
@@ -22,17 +27,23 @@
     },
     "CONTACT_TITLE": "Contáctanos",
     "CONTACT_DESCRIPTION": "Joel's Loan es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
-    "TESTIMONIALS_TITLE": "Testimonios",
-    "TESTIMONIALS_DESCRIPTION": "Joel's Loan es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
-    "TESTIMONIALS_ITEM_1_USER": "Juan Pérez",
-    "TESTIMONIALS_ITEM_2_USER": "María Gómez",
-    "TESTIMONIALS_ITEM_3_USER": "Carlos Rodríguez",
-    "TESTIMONIALS_ITEM_1_USER_OCUUPATION": "Abogado, Empresa de servicios",
-    "TESTIMONIALS_ITEM_2_USER_OCUUPATION": "Contadora, Empresa de servicios",	
-    "TESTIMONIALS_ITEM_3_USER_OCUUPATION": "Ingeniero, Empresa de servicios",
-    "TESTIMONIALS_ITEM_1_DESCRIPTION": "Excelente atención y rapidez en la entrega del préstamo.",
-    "TESTIMONIALS_ITEM_2_DESCRIPTION": "Muy buena atención y excelente trato con el cliente.",
-    "TESTIMONIALS_ITEM_3_DESCRIPTION": "Muy buen servicio y excelente atención al cliente.",
+    "TESTIMONIALS_TITLE": "¿Que dicen nuestros clientes?",
+    "TESTIMONIALS_DESCRIPTION": "No solo tome nuestra palabra. Aquí está lo que nuestros clientes tienen que decir sobre su experiencia con nuestra plataforma.",
+     "TESTIMONIALS_SUBTITLE": "Historia de cliente",
+    "TESTIMONIALS":{
+        "USER_1": "Juan Pérez",
+        "USER_2": "María Gómez",
+        "USER_3": "Karla Rodríguez",
+        "POSITION_1": "CEO",
+        "POSITION_2": "Product Manager",    
+        "POSITION_3": "CEO",
+        "COMPANY_1": "TechCorp",
+        "COMPANY_2": "Innovate Inc.",
+        "COMPANY_3": "Global Solutions",
+        "DESCRIPTION_1": "Excelente atención y rapidez en la entrega del préstamo.",
+        "DESCRIPTION_2": "Muy buena atención y excelente trato con el cliente.",
+        "DESCRIPTION_3": "Muy buen servicio y excelente atención al cliente."
+    },
 
     "FOOTER_TITLE": "Joel's Loan",
     "FOOTER_DESCRIPTION": "Joel's Loan es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
@@ -44,5 +55,25 @@
     "READY_TO_APPLY_DESCRIPTION": "Complete el formulario de solicitud de préstamo y obtenga su préstamo personal en el acto.",
     "NAVBAR_HOME": "Inicio",
     "NAVBAR_CONTACT": "Contacto",
-    "NAVBAR_BUTTON_GET_STARTED": "Comenzar Ahora"
+    "NAVBAR_BUTTON_GET_STARTED": "Comenzar Ahora",
+    
+    
+        "FORM_CONTACT_TITLE": "Envíanos un Mensaje",
+        "FORM_CONTACT_NAME": "Nombre",
+        "FORM_CONTACT_EMAIL": "Correo Electronico",
+        "FORM_CONTACT_MESSAGE": "Mensaje",
+        "FORM_CONTACT_BUTTON": "Enviar Mensaje",
+
+        "FORM_INFO_TITLE": "Nos Encanta Escucharte",
+        "FORM_INFO_DESCRIPTION": "Si tienes preguntas acerca de nosotros dejanos ayudarte, ¿comenzamos? Nuestro equipo esta aqui para asistirte en cada paso del camino.",
+        "FORM_INFO_EMAIL": "Envíanos un Correo",
+        "FORM_INFO_CALL": "Llámanos",
+        "FORM_INFO_VISIT": "Visítanos",
+        "FORM_INFO_EMAIL_TEXT": "support@loansjoel.com",
+        "FORM_INFO_CALL_TEXT": "+1 (555) 123-4567",
+        "FORM_INFO_VISIT_TEXT": "123 SaaS Street, Tech City, TC 12345",
+        "FORM_INFO_FOLLOW": "Síguenos",
+
+        "FORM_MODAL_SENT": "Mensaje Envíado",
+        "FORM_MODAL_MESSAGE": "Gracias por escribirnos, te responderemos lo mas pronto posible!"
 }

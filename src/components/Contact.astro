@@ -1,5 +1,22 @@
 ---
-
+const {
+  form_title,
+  form_name,
+  form_email,
+  form_message,
+  form_button,
+  form_info_title,
+  form_info_description,
+  form_info_email,
+  form_info_email_text,
+  form_info_call,
+  form_info_call_text,
+  form_info_visit,
+  form_info_visit_text,
+  form_info_follow,
+  form_modal_sent,
+  form_modal_message,
+} = Astro.props;
 ---
 
 <section id="contact" class="section bg-gray-50 dark:bg-gray-800/50">
@@ -12,11 +29,10 @@
           Get In Touch
         </span>
         <h2 class="mb-6 text-gray-900 dark:text-white">
-          We'd Love to Hear From You
+          {form_info_title}
         </h2>
         <p class="text-gray-600 dark:text-gray-300 mb-8">
-          Have questions about our platform or need help getting started? Our
-          team is here to assist you every step of the way.
+          {form_info_description}
         </p>
 
         <div class="space-y-6">
@@ -39,10 +55,10 @@
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Email Us
+                {form_info_email}
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                support@saasify.com
+                {form_info_email_text}
               </p>
             </div>
           </div>
@@ -66,9 +82,11 @@
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Call Us
+                {form_info_call}
               </h3>
-              <p class="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</p>
+              <p class="text-gray-600 dark:text-gray-300">
+                {form_info_call_text}
+              </p>
             </div>
           </div>
 
@@ -96,10 +114,10 @@
             </div>
             <div class="ml-4">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                Visit Us
+                {form_info_visit}
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                123 SaaS Street, Tech City, TC 12345
+                {form_info_visit_text}
               </p>
             </div>
           </div>
@@ -107,7 +125,7 @@
 
         <div class="mt-8">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-            Follow Us
+            {form_info_follow}
           </h3>
           <div class="flex space-x-4">
             <a
@@ -181,7 +199,7 @@
       <div class="slide-up" style="animation-delay: 150ms">
         <div class="card p-6 border border-gray-200 dark:border-gray-700">
           <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">
-            Send Us a Message
+            {form_title}
           </h3>
 
           <form
@@ -191,7 +209,7 @@
               <label
                 for="name"
                 class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                >Name</label
+                >{form_name}</label
               >
               <input
                 type="text"
@@ -212,7 +230,7 @@
               <label
                 for="contact-email"
                 class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                >Email</label
+                >{form_email}</label
               >
               <input
                 type="email"
@@ -233,7 +251,7 @@
               <label
                 for="message"
                 class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                >Message</label
+                >{form_message}</label
               >
               <textarea
                 id="message"
@@ -265,7 +283,7 @@
                   }
                 "
               >
-                Send Message
+                {form_button}
               </button>
             </div>
 
@@ -290,11 +308,10 @@
               <h3
                 class="text-xl font-semibold text-gray-900 dark:text-white mb-2"
               >
-                Message Sent!
+                {form_modal_sent}
               </h3>
               <p class="text-gray-600 dark:text-gray-300">
-                Thank you for reaching out. We'll get back to you as soon as
-                possible.
+                {form_modal_message}
               </p>
             </div>
           </form>

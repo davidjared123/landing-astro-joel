@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ContactForm from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import HeroSection from "../components/HeroSection.astro";
+
+import { getI18n } from "../i18n/";
+const { currentLocale } = Astro;
+const i18n = getI18n({ currentLocale });
+---
+
+<Layout title={i18n.CONTACT_TITLE}>
+  <Header
+    lang={i18n.LANG}
+    title={i18n.SEO_TITLE}
+    home={i18n.NAVBAR_HOME}
+    contact={i18n.NAVBAR_CONTACT}
+    button={i18n.NAVBAR_BUTTON_GET_STARTED}
+  />
+  <main>
+    <HeroSection
+      title={i18n.CONTACT_TITLE}
+      description={i18n.CONTACT_DESCRIPTION}
+    />
+    <ContactForm
+      form_title={i18n.FORM_CONTACT_TITLE}
+      form_name={i18n.FORM_CONTACT_NAME}
+      form_email={i18n.FORM_CONTACT_EMAIL}
+      form_message={i18n.FORM_CONTACT_MESSAGE}
+      form_button={i18n.FORM_CONTACT_BUTTON}
+      form_info_title={i18n.FORM_INFO_TITLE}
+      form_info_description={i18n.FORM_INFO_DESCRIPTION}
+      form_info_email={i18n.FORM_INFO_EMAIL}
+      form_info_email_text={i18n.FORM_INFO_EMAIL_TEXT}
+      form_info_call={i18n.FORM_INFO_CALL}
+      form_info_call_text={i18n.FORM_INFO_CALL_TEXT}
+      form_info_visit={i18n.FORM_INFO_VISIT}
+      form_info_visit_text={i18n.FORM_INFO_VISIT_TEXT}
+      form_info_follow={i18n.FORM_INFO_FOLLOW}
+      form_modal_sent={i18n.FORM_MODAL_SENT}
+      form_modal_message={i18n.FORM_MODAL_MESSAGE}
+    />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,20 @@
+---
+import { getI18n } from "../i18n";
+
+
+  // const handleLanguageChange = (locale) => {
+  //   currentLocale = locale;
+  //   translations = getI18n({ currentLocale: locale });
+  //   updateUI();
+  // };
+  const { currentLocale } = Astro;
+const i18n = getI18n({ currentLocale });
+
+  console.log(i18n)
+  console.log(`firstTranslation`) 
+---
+
+
+<div>
+  <a class="font-bold text-secondary-500 hover:text-secondary-600 dark:text-primary-100 dark:hover:text-secondary-500" href=`${i18n.set_LANG}`>{i18n.set_lang}</a>
+</div>

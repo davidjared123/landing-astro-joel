@@ -5,110 +5,35 @@
 //   { text: "404 Page", url: "/404" },
 // ];
 
-const { title, contact, home, button } = Astro.props;
+import ButtonLanguage from "./ButtonLanguage.astro";
+
+const { title, contact, home, button, lang } = Astro.props;
 ---
 
 <header
-  class="fixed w-full bg-white/90 dark:bg-secondary-950/90 backdrop-blur-sm z-50 py-4 transition-colors duration-300"
+  class="fixed w-full bg-white/90 opacity-85 dark:bg-secondary-950/90 backdrop-blur-sm z-50 py-4 transition-colors duration-300"
 >
   <div class="container-custom flex items-center justify-between">
     <a href="/" class="flex items-center" aria-label="Go to homepage">
       <!-- Elephant Logo SVG -->
       <svg
-        class="h-10 w-auto"
-        viewBox="0 0 100 100"
+        class="w-[36px] h-[36px] text-gray-800 dark:text-white"
+        aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
       >
-        <!-- Background circle -->
-        <circle
-          cx="50"
-          cy="50"
-          r="48"
-          fill="#f0f9ff"
-          class="dark:fill-slate-800"></circle>
-
-        <!-- Elephant body -->
-        <ellipse
-          cx="55"
-          cy="55"
-          rx="30"
-          ry="25"
-          fill="#64748b"
-          class="dark:fill-slate-600"></ellipse>
-
-        <!-- Head -->
-        <ellipse
-          cx="30"
-          cy="45"
-          rx="18"
-          ry="16"
-          fill="#64748b"
-          class="dark:fill-slate-600"></ellipse>
-
-        <!-- Ears -->
-        <ellipse
-          cx="35"
-          cy="35"
-          rx="14"
-          ry="12"
-          fill="#94a3b8"
-          class="dark:fill-slate-500"></ellipse>
-        <ellipse
-          cx="25"
-          cy="35"
-          rx="14"
-          ry="12"
-          fill="#64748b"
-          class="dark:fill-slate-600"></ellipse>
-        <ellipse
-          cx="35"
-          cy="35"
-          rx="10"
-          ry="9"
-          fill="#64748b"
-          class="dark:fill-slate-600"></ellipse>
-        <ellipse
-          cx="25"
-          cy="35"
-          rx="10"
-          ry="9"
-          fill="#475569"
-          class="dark:fill-slate-700"></ellipse>
-
-        <!-- Trunk -->
         <path
-          d="M25 50 Q20 60 15 70 Q13 75 18 78 Q23 80 25 75 Q27 70 25 65 Q23 60 27 55 Q29 52 30 50"
-          fill="#64748b"
-          class="dark:fill-slate-600"></path>
-
-        <!-- Eyes -->
-        <circle cx="25" cy="42" r="2" fill="#1e293b" class="dark:fill-white"
-        ></circle>
-
-        <!-- Tusks -->
+          fill-rule="evenodd"
+          d="M7 6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2v-4a3 3 0 0 0-3-3H7V6Z"
+          clip-rule="evenodd"></path>
         <path
-          d="M20 55 Q18 58 16 60"
-          stroke="white"
-          stroke-width="2"
-          fill="none"
-          class="dark:stroke-slate-300"></path>
-        <path
-          d="M15 55 Q13 58 11 60"
-          stroke="white"
-          stroke-width="2"
-          fill="none"
-          class="dark:stroke-slate-300"></path>
-
-        <!-- Decorative circle -->
-        <circle
-          cx="50"
-          cy="50"
-          r="46"
-          stroke="#0ea5e9"
-          stroke-width="1.5"
-          fill="none"
-          class="dark:stroke-teal-500"
-          stroke-dasharray="3,2"></circle>
+          fill-rule="evenodd"
+          d="M2 11a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7Zm7.5 1a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"
+          clip-rule="evenodd"></path>
+        <path d="M10.5 14.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
       </svg>
       <span
         class="ml-2 text-xl font-display font-semibold text-secondary-900 dark:text-white"
@@ -118,67 +43,17 @@ const { title, contact, home, button } = Astro.props;
 
     <nav class="hidden md:flex items-center space-x-8">
       <a
-        href="/"
+        href=`${lang}`
         class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors"
-        >{home}</a
-      >
+        >{home}
+      </a>
       <a
-        href="/contact"
-        class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors"
-        >{contact}</a
-      >
-
-      <!-- All Pages Dropdown -->
-      <!-- <div x-data="{ open: false }" class="relative">
-        <button
-          @click="open = !open"
-          @click.away="open = false"
-          class="flex items-center text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors"
-        >
-          All Pages
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 ml-1"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-
-        <div
-          x-show="open"
-          x-transition:enter="transition ease-out duration-200"
-          x-transition:enter-start="opacity-0 scale-95"
-          x-transition:enter-end="opacity-100 scale-100"
-          x-transition:leave="transition ease-in duration-150"
-          x-transition:leave-start="opacity-100 scale-100"
-          x-transition:leave-end="opacity-0 scale-95"
-          class="absolute left-0 mt-2 w-56 bg-white dark:bg-secondary-900 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 max-h-96 overflow-y-auto"
-          x-cloak
-        >
-          <div class="py-2 grid grid-cols-1 gap-1">
-            {
-              allPages.map((page) => (
-                <a
-                  href={page.url}
-                  class="block px-4 py-2 text-sm text-secondary-700 dark:text-secondary-300 hover:bg-secondary-100 dark:hover:bg-secondary-800"
-                >
-                  {page.text}
-                </a>
-              ))
-            }
-          </div>
-        </div>
-      </div> -->
-    </nav>
-
-    <div class="flex items-center space-x-4">
+        href=`${lang}contact`
+        class="text-secondary-600 hover:text-primary-600 dark:text-secondary-300 dark:hover:text-primary-400 font-medium transition-colors">{contact}</a>
+      </nav>
+      
+      <div class="flex items-center space-x-4">
+      <ButtonLanguage />
       <button
         x-on:click="darkMode = !darkMode"
         class="p-2 rounded-full text-secondary-500 hover:text-secondary-700 dark:text-secondary-400 dark:hover:text-secondary-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -216,7 +91,11 @@ const { title, contact, home, button } = Astro.props;
         </svg>
       </button>
 
-      <a href="#signup" class="hidden sm:inline-flex btn-primary">{button}</a>
+      <!-- NEWSLETTER FORM BUTTON  -->
+      <!-- <a href="#signup" class="hidden sm:inline-flex btn-primary">{button}</a> -->
+      <a href=`${lang}contact` class="hidden sm:inline-flex btn-primary"
+        >{button}</a
+      >
 
       <!-- Mobile Menu Button and Dropdown -->
       <div x-data="{ open: false, showAllPages: false }">
@@ -280,42 +159,42 @@ const { title, contact, home, button } = Astro.props;
       </div>
     </div>
   </div>
+
+  <style>
+    /* Add styles for dark mode SVG in the header */
+    @media (prefers-color-scheme: dark) {
+      .dark\:fill-slate-800 {
+        fill: #1e293b;
+      }
+      .dark\:fill-slate-600 {
+        fill: #475569;
+      }
+      .dark\:fill-slate-500 {
+        fill: #64748b;
+      }
+      .dark\:fill-slate-700 {
+        fill: #334155;
+      }
+      .dark\:stroke-slate-300 {
+        stroke: #cbd5e1;
+      }
+      .dark\:stroke-teal-500 {
+        stroke: #14b8a6;
+      }
+      .dark\:fill-white {
+        fill: #ffffff;
+      }
+    }
+
+    /* Add hover animation to the logo */
+    header a:hover svg {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hide Alpine.js elements before Alpine loads */
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
 </header>
-
-<style>
-  /* Add styles for dark mode SVG in the header */
-  @media (prefers-color-scheme: dark) {
-    .dark\:fill-slate-800 {
-      fill: #1e293b;
-    }
-    .dark\:fill-slate-600 {
-      fill: #475569;
-    }
-    .dark\:fill-slate-500 {
-      fill: #64748b;
-    }
-    .dark\:fill-slate-700 {
-      fill: #334155;
-    }
-    .dark\:stroke-slate-300 {
-      stroke: #cbd5e1;
-    }
-    .dark\:stroke-teal-500 {
-      stroke: #14b8a6;
-    }
-    .dark\:fill-white {
-      fill: #ffffff;
-    }
-  }
-
-  /* Add hover animation to the logo */
-  header a:hover svg {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-  }
-
-  /* Hide Alpine.js elements before Alpine loads */
-  [x-cloak] {
-    display: none !important;
-  }
-</style>
