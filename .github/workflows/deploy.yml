@@ -17,11 +17,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
+          - name: Install pnpm
+            run: npm install -g pnpm@8 # Especifica la versión de pnpm que deseas usar
           node-version: 18
           cache: 'pnpm'
 
-      - name: Install pnpm
-        run: npm install -g pnpm@8 # Especifica la versión de pnpm que deseas usar
 
       - name: Install dependencies
         run: pnpm install
