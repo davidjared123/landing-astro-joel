@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/netlify": "^6.2.3",
     "@astrojs/tailwind": "^5.1.0",
     "alpinejs": "^3.13.5",
     "astro": "^5.2.5",
