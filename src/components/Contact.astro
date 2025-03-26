@@ -214,6 +214,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
               name="contact"  
               id="contact-form"
               x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }"
+              
           >
 
             <input type="hidden" name="form-name" value="contact" />
@@ -344,51 +345,11 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
 
-    const validateForm = () => {
-      let isValid = true;
-
-      // Validación del campo "name"
-      const nameInput = document.getElementById("name");
-      const nameError = document.getElementById("name-error");
-      if (!nameInput.value.trim()) {
-        nameError.style.display = "block";
-        isValid = false;
-      } else {
-        nameError.style.display = "none";
-      }
-
-      // Validación del campo "email"
-      const emailInput = document.getElementById("email");
-      const emailError = document.getElementById("email-error");
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
-        emailError.style.display = "block";
-        isValid = false;
-      } else {
-        emailError.style.display = "none";
-      }
-
-      // Validación del campo "message"
-      const messageInput = document.getElementById("message");
-      const messageError = document.getElementById("message-error");
-      if (!messageInput.value.trim()) {
-        messageError.style.display = "block";
-        isValid = false;
-      } else {
-        messageError.style.display = "none";
-      }
-
-      return isValid;
-    };
-
     const handleSubmit = (event) => {
       event.preventDefault();
 
-      if (!validateForm()) {
-        return;
-      }
-
       const formData = new FormData(form);
+      console.log("Form data:", [...formData.entries()]);
 
       fetch("/", {
         method: "POST",
@@ -397,7 +358,8 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
       })
         .then((response) => {
           if (response.ok) {
-            window.location.href = "/"; // Redirige a la página de éxito
+            alert("Form successfully submitted!");
+            form.reset(); // Limpia el formulario después del envío
           } else {
             console.error("Error submitting form:", response.statusText);
             alert("There was an error submitting the form. Please try again.");
