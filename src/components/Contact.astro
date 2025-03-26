@@ -203,12 +203,17 @@ const {
           </h3>
 
           <form 
-          name="contact" 
-          method="POST" 
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-          x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }" 
-          >
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }">
+
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display: none;">
+              <label>No llenes esto: <input name="bot-field" /></label>
+            </p>
+
             <div class="mb-4">
               <label
                 for="name"
@@ -218,6 +223,7 @@ const {
               <input
                 type="text"
                 id="name"
+                name="name"
                 x-model="name"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 placeholder="Your name"
@@ -239,6 +245,7 @@ const {
               <input
                 type="email"
                 id="contact-email"
+                name="email"
                 x-model="email"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 placeholder="Your email"
@@ -260,6 +267,7 @@ const {
               <textarea
                 id="message"
                 x-model="message"
+                name="message"
                 rows="5"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
                 placeholder="Your message"></textarea>
@@ -269,25 +277,23 @@ const {
                 x-text="errors.message"
               >
               </p>
-              <div data-netlify-recaptcha="true"></div>
             </div>
-
+            
+            <br>
+            <div data-netlify-recaptcha="true"></div>
+            <br>
+            
             <div x-show="!submitted">
               <button
                 type="submit"
                 class="w-full btn-primary"
-                x-on:click.prevent="
-                  errors = {};
-                  if (!name) errors.name = 'Please enter your name';
-                  if (!email) errors.email = 'Please enter your email';
-                  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Please enter a valid email';
-                  if (!message) errors.message = 'Please enter your message';
-                  
-                  if (Object.keys(errors).length === 0) {
-                    submitted = true;
-                  }
-                "
-              >
+                x-on:click="errors = {};
+                if (!name) errors.name = '...';
+                if (Object.keys(errors).length === 0) {
+                  submitted = true;
+                  $event.target.form.submit();
+                }
+                ">
                 {form_button}
               </button>
             </div>
@@ -325,3 +331,4 @@ const {
     </div>
   </div>
 </section>
+
