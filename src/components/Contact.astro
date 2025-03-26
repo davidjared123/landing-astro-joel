@@ -211,10 +211,10 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
               data-netlify="true"
               netlify-honeypot="bot-field"
               method="POST"
-              name="contact"
-              action="/"
+              name="contact"  
+              id="contact-form"
               x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }"
-            >
+          >
 
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
@@ -341,35 +341,74 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
 </section>
 
 <script>
-  const handleSubmit = event => {
-    event.preventDefault(); // Evita el envío tradicional del formulario
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
 
-    const myForm = event.target; // Obtiene el formulario
-    const formData = new FormData(myForm); // Crea un objeto FormData con los datos del formulario
+    const validateForm = () => {
+      let isValid = true;
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(
-        [...formData.entries()].filter(([key, value]) => typeof value === "string") as [string, string][]
-      ).toString() // Convierte los datos a una cadena codificada como URL
-    })
-      .then(response => {
-        if (response.ok) {
-          console.log("Form successfully submitted");
-          // Redirige a una página de confirmación
-          window.location.href = "/";
-        }
+      // Validación del campo "name"
+      const nameInput = document.getElementById("name");
+      const nameError = document.getElementById("name-error");
+      if (!nameInput.value.trim()) {
+        nameError.style.display = "block";
+        isValid = false;
+      } else {
+        nameError.style.display = "none";
+      }
+
+      // Validación del campo "email"
+      const emailInput = document.getElementById("email");
+      const emailError = document.getElementById("email-error");
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailInput.value.trim() || !emailRegex.test(emailInput.value)) {
+        emailError.style.display = "block";
+        isValid = false;
+      } else {
+        emailError.style.display = "none";
+      }
+
+      // Validación del campo "message"
+      const messageInput = document.getElementById("message");
+      const messageError = document.getElementById("message-error");
+      if (!messageInput.value.trim()) {
+        messageError.style.display = "block";
+        isValid = false;
+      } else {
+        messageError.style.display = "none";
+      }
+
+      return isValid;
+    };
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      if (!validateForm()) {
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
       })
-      .catch(error => {
-        console.error("Error submitting form:", error);
-        alert("There was an error submitting the form. Please try again.");
-      });
-  };
+        .then((response) => {
+          if (response.ok) {
+            window.location.href = "/"; // Redirige a la página de éxito
+          } else {
+            console.error("Error submitting form:", response.statusText);
+            alert("There was an error submitting the form. Please try again.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error submitting form:", error);
+          alert("There was an error submitting the form. Please try again.");
+        });
+    };
 
-  // Agrega el evento de envío al formulario
-  const formElement = document.querySelector("form");
-  if (formElement) {
-    formElement.addEventListener("submit", handleSubmit);
-  }
+    form.addEventListener("submit", handleSubmit);
+  });
 </script>
