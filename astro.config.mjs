@@ -11,7 +11,6 @@ export default defineConfig({
     edgeMiddleware: true
   }),
   site: 'https://davidjared123.github.io',
-  base: 'landing-astro-joel',
   integrations: [tailwind(), alpinejs()],
   i18n: {
     defaultLocale: "en",

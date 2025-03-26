@@ -202,8 +202,12 @@ const {
             {form_title}
           </h3>
 
-          <form
-            x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }"
+          <form 
+          name="contact" 
+          method="POST" 
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }" 
           >
             <div class="mb-4">
               <label
@@ -265,6 +269,7 @@ const {
                 x-text="errors.message"
               >
               </p>
+              <div data-netlify-recaptcha="true"></div>
             </div>
 
             <div x-show="!submitted">
