@@ -22,6 +22,7 @@ const {
   :class="{ 'dark': darkMode }"
 >
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -39,6 +40,7 @@ const {
   <body
     class="antialiased bg-white dark:bg-secondary-950 text-secondary-900 dark:text-secondary-100 transition-colors duration-300"
   >
+
     <div id="page-wrapper" class="page-transition-wrapper">
       <slot />
     </div>
@@ -72,5 +74,6 @@ const {
       });
     </script>
     <script src="../scripts/transitions.js"></script>
+   
   </body>
 </html>

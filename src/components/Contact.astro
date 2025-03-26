@@ -17,6 +17,10 @@ const {
   form_modal_sent,
   form_modal_message,
 } = Astro.props;
+
+
+const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
+
 ---
 
 <section id="contact" class="section bg-gray-50 dark:bg-gray-800/50">
@@ -202,17 +206,18 @@ const {
             {form_title}
           </h3>
 
+          
           <form 
-            name="contact" 
-            method="POST" 
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }">
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              method="POST"
+              name="contact"
+              action="/"
+              x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }"
+            >
 
             <input type="hidden" name="form-name" value="contact" />
-            <p style="display: none;">
-              <label>No llenes esto: <input name="bot-field" /></label>
-            </p>
+            <input type="hidden" name="bot-field" />
 
             <div class="mb-4">
               <label
@@ -265,12 +270,12 @@ const {
                 >{form_message}</label
               >
               <textarea
-                id="message"
-                x-model="message"
-                name="message"
-                rows="5"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                placeholder="Your message"></textarea>
+              id="message"
+              name="message"
+              x-model="message"
+              rows="5"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+              placeholder="Your message"></textarea>
               <p
                 class="text-red-500 text-sm mt-1"
                 x-show="errors.message"
@@ -278,22 +283,25 @@ const {
               >
               </p>
             </div>
-            
-            <br>
-            <div data-netlify-recaptcha="true"></div>
-            <br>
-            
+
             <div x-show="!submitted">
               <button
                 type="submit"
                 class="w-full btn-primary"
-                x-on:click="errors = {};
-                if (!name) errors.name = '...';
-                if (Object.keys(errors).length === 0) {
-                  submitted = true;
-                  $event.target.form.submit();
-                }
-                ">
+                x-on:click="
+                  errors = {};
+                  if (!name) errors.name = 'Please enter your name';
+                  if (!email) errors.email = 'Please enter your email';
+                  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Please enter a valid email';
+                  if (!message) errors.message = 'Please enter your message';
+                  if (Object.keys(errors).length === 0) {
+                    submitted = true;
+                    setTimeout(() => $event.target.form.submit(), 300);
+                  } else {
+                    $event.preventDefault();
+                  }
+                "
+              >
                 {form_button}
               </button>
             </div>
@@ -332,3 +340,36 @@ const {
   </div>
 </section>
 
+<script>
+  const handleSubmit = event => {
+    event.preventDefault(); // Evita el envío tradicional del formulario
+
+    const myForm = event.target; // Obtiene el formulario
+    const formData = new FormData(myForm); // Crea un objeto FormData con los datos del formulario
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(
+        [...formData.entries()].filter(([key, value]) => typeof value === "string") as [string, string][]
+      ).toString() // Convierte los datos a una cadena codificada como URL
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log("Form successfully submitted");
+          // Redirige a una página de confirmación
+          window.location.href = "/";
+        }
+      })
+      .catch(error => {
+        console.error("Error submitting form:", error);
+        alert("There was an error submitting the form. Please try again.");
+      });
+  };
+
+  // Agrega el evento de envío al formulario
+  const formElement = document.querySelector("form");
+  if (formElement) {
+    formElement.addEventListener("submit", handleSubmit);
+  }
+</script>
