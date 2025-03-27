@@ -208,15 +208,14 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
 
           
           <form 
-              data-netlify="true"
+              netlify
               netlify-honeypot="bot-field"
               method="POST"
               name="contact"  
               id="contact-form"
               x-data="{ name: '', email: '', message: '', submitted: false, errors: {} }"
+              >
               
-          >
-
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
 
@@ -288,7 +287,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
             <div x-show="!submitted">
               <button
                 type="submit"
-                class="w-full btn-primary"
+                class="w-full btn-primary"  
                 x-on:click="
                   errors = {};
                   if (!name) errors.name = 'Please enter your name';
