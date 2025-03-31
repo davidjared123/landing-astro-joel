@@ -208,14 +208,13 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
           </h3>
 
           
-          <!-- action="/" -->
           <form 
-            method="POST"
-            name="contact"  
-            id="contact-form"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
+          method="POST"
+          name="contact"  
+          id="contact-form"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          action="/"
             
           >
               
@@ -283,7 +282,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
             </div>
 
             <div >
-              <div data-netlify-recaptcha="true"></div>
+              <!-- <div data-netlify-recaptcha="true"></div> -->
               <button
                 type="submit"
                 class="w-full btn-primary"  
