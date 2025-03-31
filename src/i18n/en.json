@@ -44,6 +44,24 @@
         "COMPANY_2": "Innovate Inc.",
         "COMPANY_3": "Global Solutions"
     },
+    "OPTIONS": {
+        "TITLE": "FLoan Options",
+        "OPTION_1": "Fix and Flip Funding",
+        "OPTION_1_LIST": {
+            "OPTION_1_1": "Full Project Financing: Get 100% of the purchase price and rehab costs covered — up to 80% of the ARV. You only cover closing costs.",
+            "OPTION_1_2": "Fast Approvals: Receive your funds in just 48 to 72 hours.",
+            "OPTION_1_3": "No Credit Check Needed: Your credit score won’t impact your approval.",
+            "OPTION_1_4": "No Income Docs Required: Skip the paperwork — no income verification necessary."
+        },
+        "OPTION_2": "Cash-Out Refinance",
+        "OPTION_2_LIST": {
+            "OPTION_2_1": "Maximize Your Equity: Pull out up to 85% of your property’s value.",
+            "OPTION_2_2": "Minimum Credit Score: A FICO of 640 or higher is needed.",
+            "OPTION_2_3": "Smooth Closings: Typically closed within 3 to 4 weeks.",
+            "OPTION_2_4": "No Income Docs Required: Income verification isn’t part of the process.",
+            "OPTION_2_5": "Flexible Payment Options: Interest-only loans available in 5, 7, or 10-year terms."
+        }
+    },
 
     "FOOTER_TITLE": "Joel has money",	
     "FOOTER_DESCRIPTION": "We fund flips, rentals, and creative deals with real, asset-backed capital—no banks, no delays. If your numbers work, the funds move. Fast decisions. Straightforward solutions. Closed.",

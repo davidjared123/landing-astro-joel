@@ -44,7 +44,24 @@
         "DESCRIPTION_2": "Muy buena atención y excelente trato con el cliente.",
         "DESCRIPTION_3": "Muy buen servicio y excelente atención al cliente."
     },
-
+    "OPTIONS": {
+        "TITLE": "Opciones de Préstamo",
+        "OPTION_1": "Financiamiento de Fix & Flips", 
+        "OPTION_1_LIST": {
+            "OPTION_1_1": "Full Project Financing: Get 100% of the purchase price and rehab costs covered — up to 80% of the ARV. You only cover closing costs.",
+            "OPTION_1_2": "Fast Approvals: Receive your funds in just 48 to 72 hours.",
+            "OPTION_1_3": "No Credit Check Needed: Your credit score won’t impact your approval.",
+            "OPTION_1_4": "No Income Docs Required: Skip the paperwork — no income verification necessary."
+        },
+        "OPTION_2": "Financiamiento Cash-Out",
+        "OPTION_2_LIST": {
+            "OPTION_2_1": "Maximize Your Equity: Pull out up to 85% of your property’s value.",
+            "OPTION_2_2": "Minimum Credit Score: A FICO of 640 or higher is needed.",
+            "OPTION_2_3": "Smooth Closings: Typically closed within 3 to 4 weeks.",
+            "OPTION_2_4": "No Income Docs Required: Income verification isn’t part of the process.",
+            "OPTION_2_5": "Flexible Payment Options: Interest-only loans available in 5, 7, or 10-year terms."
+        }
+    },
     "FOOTER_TITLE": "Joel has money",
     "FOOTER_DESCRIPTION": "Encontramos flips, alquileres y financiamientos creativos con capital real respaldado por activos, sin bancos ni demoras. Si tus números funcionan, los fondos se mueven. Decisiones rápidas. Soluciones sencillas.",
     "FOOTER_CONTACT": "Contacto",
