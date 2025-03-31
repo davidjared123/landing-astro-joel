@@ -1,45 +1,44 @@
 ---
 const currentYear = new Date().getFullYear();
+const { title } = Astro.props;
 
 const footerLinks = [
   {
     title: "Home",
     links: [
       { text: "Home", url: "/" },
-      { text: "Features", url: "/features" },
-      { text: "Pricing", url: "/pricing" },
       { text: "Contact", url: "/contact" },
     ],
   },
-  {
-    title: "Product",
-    links: [
-      { text: "Features", url: "/features" },
-      { text: "Pricing", url: "/pricing" },
-      { text: "FAQ", url: "/faqs" },
-      { text: "Changelog", url: "/changelog" },
-      { text: "Integrations", url: "/integrations" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { text: "Blog", url: "/blog" },
-      { text: "Case Studies", url: "/case-study" },
-      { text: "404 Page", url: "/404" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { text: "About Us", url: "/company" },
-      { text: "Careers", url: "/career" },
-      { text: "Contact", url: "/contact" },
-      { text: "Reviews", url: "/reviews" },
-      { text: "Privacy Policy", url: "/privacy-policy" },
-      { text: "Terms of Service", url: "/terms-conditions" },
-    ],
-  },
+  // {
+  //   title: "Product",
+  //   links: [
+  //     { text: "Features", url: "/features" },
+  //     { text: "Pricing", url: "/pricing" },
+  //     { text: "FAQ", url: "/faqs" },
+  //     { text: "Changelog", url: "/changelog" },
+  //     { text: "Integrations", url: "/integrations" },
+  //   ],
+  // },
+  // {
+  //   title: "Resources",
+  //   links: [
+  //     { text: "Blog", url: "/blog" },
+  //     { text: "Case Studies", url: "/case-study" },
+  //     { text: "404 Page", url: "/404" },
+  //   ],
+  // },
+  // {
+  //   title: "Company",
+  //   links: [
+  //     { text: "About Us", url: "/company" },
+  //     { text: "Careers", url: "/career" },
+  //     { text: "Contact", url: "/contact" },
+  //     { text: "Reviews", url: "/reviews" },
+  //     { text: "Privacy Policy", url: "/privacy-policy" },
+  //     { text: "Terms of Service", url: "/terms-conditions" },
+  //   ],
+  // },
 ];
 ---
 
@@ -58,7 +57,7 @@ const footerLinks = [
             ></path>
           </svg>
           <span class="ml-2 text-xl font-display font-semibold text-white"
-            >SaaSify</span
+            >Joel has money</span
           >
         </a>
         <p class="text-gray-400 mb-6 max-w-md">
