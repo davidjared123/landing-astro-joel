@@ -214,7 +214,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
             netlify-honeypot="bot-field"
             data-netlify="true"
             action="/"
-
+            data-netlify-recaptcha="true"
             
           >
               
@@ -280,6 +280,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
             </div>
 
             <div >
+              <div data-netlify-recaptcha="true"></div>
               <button
                 type="submit"
                 class="w-full btn-primary"  
