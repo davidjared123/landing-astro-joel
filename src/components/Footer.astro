@@ -1,6 +1,6 @@
 ---
 const currentYear = new Date().getFullYear();
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 const footerLinks = [
   {
@@ -57,12 +57,11 @@ const footerLinks = [
             ></path>
           </svg>
           <span class="ml-2 text-xl font-display font-semibold text-white"
-            >Joel has money</span
+            >{title}</span
           >
         </a>
         <p class="text-gray-400 mb-6 max-w-md">
-          Empowering businesses with innovative SaaS solutions that drive
-          growth, efficiency, and success in the digital age.
+          {description}
         </p>
         <div class="flex space-x-4">
           <a
