@@ -1,5 +1,5 @@
 ---
-const { title, description, FEATURES, subtitle } = Astro.props;
+const { title, button, FEATURES, subtitle, lang } = Astro.props;
 const features = [
   {
     title: FEATURES.FEATURES_ITEM_1,
@@ -108,5 +108,9 @@ const features = [
         </svg>
       </a>
     </div> -->
+    <br>
+    <a href=`${lang}contact` class="hidden sm:inline-flex btn-primary"
+    >{button}</a
+  >
   </div>
 </section>
