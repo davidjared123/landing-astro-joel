@@ -10,7 +10,7 @@
      "HOME_SUBTITLE": "Financio flips, alquileres y financiamientos creativos con capital real respaldado por activos. Sin bancos, sin drama, solo soluciones rápidas.",
     "FEATURES_TITLE": "Lo que necesitas para tener éxito",
     "FEATURES_SUBTITLE": "Funciones potentes",
-    "FEATURES_DESCRIPTION": "Joel has Money es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
+    "FEATURES_DESCRIPTION": "Joel has Money está financiando movimientos inmobiliarios inteligentes. Si su trato tiene sentido, el dinero está listo. ",
     "FEATURES":{
         "FEATURES_ITEM_1": "Paso 1",
         "FEATURES_ITEM_2": "Paso 2",
@@ -48,18 +48,18 @@
         "TITLE": "Opciones de Préstamo",
         "OPTION_1": "Financiamiento de Fix & Flips", 
         "OPTION_1_LIST": {
-            "OPTION_1_1": "Full Project Financing: Get 100% of the purchase price and rehab costs covered — up to 80% of the ARV. You only cover closing costs.",
+            "OPTION_1_1": "Proyecto Financiado: Obtén el 100% del precio de compra y los costos de rehabilitación cubiertos, hasta el 80% del ARV. Solo cubres los costos de cierre.",
             "OPTION_1_2": "Fast Approvals: Receive your funds in just 48 to 72 hours.",
             "OPTION_1_3": "No Credit Check Needed: Your credit score won’t impact your approval.",
             "OPTION_1_4": "No Income Docs Required: Skip the paperwork — no income verification necessary."
         },
         "OPTION_2": "Financiamiento Cash-Out",
         "OPTION_2_LIST": {
-            "OPTION_2_1": "Maximize Your Equity: Pull out up to 85% of your property’s value.",
-            "OPTION_2_2": "Minimum Credit Score: A FICO of 640 or higher is needed.",
-            "OPTION_2_3": "Smooth Closings: Typically closed within 3 to 4 weeks.",
-            "OPTION_2_4": "No Income Docs Required: Income verification isn’t part of the process.",
-            "OPTION_2_5": "Flexible Payment Options: Interest-only loans available in 5, 7, or 10-year terms."
+            "OPTION_2_1": "Maximiza tu Capital: Retira hasta el 85% del valor de su propiedad.",
+            "OPTION_2_2": "Puntuación de Crédito Mínima: Se necesita un FICO de 640 o más.",
+            "OPTION_2_3": "Cierres Suaves: Normalmente se cierran dentro de 3 a 4 semanas.",
+            "OPTION_2_4": "No se Requieren Documentos de Ingresos: La verificación de ingresos no es parte del proceso.",
+            "OPTION_2_5": "Opciones de Pago Flexibles: Préstamos solo de interés disponibles en plazos de 5, 7 o 10 años."
         }
     },
     "FOOTER_TITLE": "Joel has money",
