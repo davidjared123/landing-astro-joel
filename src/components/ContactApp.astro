@@ -43,5 +43,12 @@ const i18n = getI18n({ currentLocale });
       options={i18n.OPTIONS}
     />
   </main>
-  <Footer />
+  <Footer 
+    title={i18n.FOOTER_TITLE} description={i18n.FOOTER_DESCRIPTION}     info_description={i18n.FORM_INFO_DESCRIPTION}
+    info_email={i18n.FORM_INFO_EMAIL}
+    info_email_text={i18n.FORM_INFO_EMAIL_TEXT}
+    info_call={i18n.FORM_INFO_CALL}
+    info_call_text={i18n.FORM_INFO_CALL_TEXT}
+    info_visit={i18n.FORM_INFO_VISIT}
+    info_visit_text={i18n.FORM_INFO_VISIT_TEXT} />
 </Layout>
