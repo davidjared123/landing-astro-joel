@@ -91,6 +91,10 @@
         "FORM_INFO_VISIT_TEXT": "123 SaaS Street, Tech City, TC 12345",
         "FORM_INFO_FOLLOW": "Follow Us",
         "FORM_MODAL_SENT": "Message Sent!",
-        "FORM_MODAL_MESSAGE": "Thank you for reaching out. We'll get back to you as soon as possible."
+        "FORM_MODAL_MESSAGE": "Thank you for reaching out. We'll get back to you as soon as possible.",
+        "FORM_QUESTION_1": "What type of loan are you interested in?",
+        "FORM_QUESTION_1_TEXT": "Please select the type of loan you are interested in.",
+        "FORM_QUESTION_2": "What is the purpose of the loan?",
+        "FORM_QUESTION_2_TEXT": "Please provide a brief description of the purpose of the loan."
 
 }

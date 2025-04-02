@@ -92,5 +92,9 @@
         "FORM_INFO_FOLLOW": "Síguenos",
 
         "FORM_MODAL_SENT": "Mensaje Envíado",
-        "FORM_MODAL_MESSAGE": "Gracias por escribirnos, te responderemos lo mas pronto posible!"
+        "FORM_MODAL_MESSAGE": "Gracias por escribirnos, te responderemos lo mas pronto posible!",
+        "FORM_QUESTION_1": "Que tipo de préstamo te interesa?",
+        "FORM_QUESTION_1_TEXT": "Por favor selecciona el tipo de préstamo que te interesa.",
+        "FORM_QUESTION_2": "Cual es el propósito del préstamo?",
+        "FORM_QUESTION_2_TEXT": "Por favor proporciona una breve descripción del propósito del préstamo."
 }
