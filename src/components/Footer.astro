@@ -41,7 +41,7 @@ const footerLinks = [
   //   links: [
   //     { text: "About Us", url: "/company" },
   //     { text: "Careers", url: "/career" },
-  //     { text: "Contact", url: "/contact" },
+  //     { text: "Contact", url: "/" },
   //     { text: "Reviews", url: "/reviews" },
   //     { text: "Privacy Policy", url: "/privacy-policy" },
   //     { text: "Terms of Service", url: "/terms-conditions" },
@@ -235,23 +235,23 @@ const footerLinks = [
       </div>
 
       {
-        footerLinks.map((column) => (
-          <div>
-            <h3 class="text-lg font-semibold mb-4">{column.title}</h3>
-            <ul class="space-y-2">
-              {column.links.map((link) => (
-                <li>
-                  <a
-                    href={link.url}
-                    class="text-gray-400 hover:text-primary-400 transition-colors"
-                  >
-                    {link.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
+        // footerLinks.map((column) => (
+        //   <div>
+        //     <h3 class="text-lg font-semibold mb-4">{column.title}</h3>
+        //     <ul class="space-y-2">
+        //       {column.links.map((link) => (
+        //         <li>
+        //           <a
+        //             href={link.url}
+        //             class="text-gray-400 hover:text-primary-400 transition-colors"
+        //           >
+        //             {link.text}
+        //           </a>
+        //         </li>
+        //       ))}
+        //     </ul>
+        //   </div>
+        // ))
       }
     </div>
 
