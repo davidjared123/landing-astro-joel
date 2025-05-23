@@ -5,8 +5,3 @@
 [build.environment]
   PNPM_VERSION = "9.0.5"
 
-[[redirects]]
-  from = "https://joelsmoney.com/*"
-  to = "https://www.joelsmoney.com/:splat"
-  status = 301
-  force = true
