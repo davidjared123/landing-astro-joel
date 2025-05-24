@@ -1,5 +1,6 @@
 ---
-const { name, fist_title, title, description, button, subtitle } = Astro.props;
+
+const { name, fist_title, title, description, button, subtitle, lang } = Astro.props;
 ---
 
 <section class="relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section  h-[90vh] md:h-[100vh]">
@@ -14,7 +15,7 @@ const { name, fist_title, title, description, button, subtitle } = Astro.props;
   ></video>
 
   <!-- Overlay para oscurecer el video si lo deseas -->
-  <div class="absolute top-0 left-0 w-full h-full dark:opacity-75 opacity-25 dark:bg-secondary-700 bg-secondary-500 z-10"></div>
+  <div class="absolute top-0 left-0 w-full h-full dark:opacity-75 opacity-25 dark:bg-secondary-700 bg-secondary-500 z-10 "></div>
 
   <!-- Contenido principal -->
   <div class="container-custom relative z-10 max-h-screen lg-flex lg-items-center overflow-hidden"
@@ -34,7 +35,7 @@ const { name, fist_title, title, description, button, subtitle } = Astro.props;
         {description}
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="/contact" class="btn-primary">{button} </a>
+        <a href=`${lang}contact` class="btn-primary">{button} </a>
       </div>
     </div>
   </div>
@@ -43,88 +44,6 @@ const { name, fist_title, title, description, button, subtitle } = Astro.props;
 </div>
 
 </section>
-
-<!-- <section
-  class="bg-[url(../assets/hero.jpg)] md:bg-[url(../assets/Hero2.webp)] max-h-screen bg-cover  md-bg-position-right relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section"
->
-  <div
-    class="absolute top-0 left-0 w-full h-full dark:opacity-75 opacity-25 dark:bg-secondary-800 bg-secondary-400 z-0"
-  >
-  </div>
-  <div
-    class="container-custom relative z-10 min-h-[80vh] lg-flex lg-items-center"
-  >
-    <div class="grid md:grid-cols-4 gap-12 items-center">
-      <div class="col-start-1 col-end-3 slide-up" transition:animate="slide">
-        <h1 class="mb-6 text-white dark:text-white leading-tight">
-          <span class="text-accent-500 dark:text-primary-400">{fist_title}</span>
-          <br>
-          <span>
-            {title}
-          </span>
-        </h1>
-        <p
-          class="text-xl text-secondary-100 dark:text-secondary-300 mb-8 max-w-lg"
-        >
-          {description}
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="/contact" class="btn-primary">{button} </a>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Teal section at the bottom with Trusted By -->
-    <!-- <div class="mt-10 w-full overflow-hidden -z-10" transition:animate="slide">
-      <div class="relative bg-teal-400 dark:bg-teal-500 py-12 md:py-16">
-        <div class="container-custom">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <div
-                class="text-3xl md:text-4xl font-bold text-black dark:text-black"
-              >
-                Next <span class="bg-accent-400 px-2 py-1">generation</span> SasS
-                template for your bussiness.
-              </div>
-            </div>
-
-            <div class="flex flex-col items-start md:items-end justify-center">
-              <p
-                class="text-sm uppercase tracking-wider text-teal-800 dark:text-teal-800 font-medium mb-4"
-              >
-                TRUSTED BY
-              </p>
-              <div
-                class="flex flex-wrap justify-start md:justify-end gap-x-8 gap-y-4"
-              >
-                <div class="h-8 flex items-center">
-                  <span class="text-black dark:text-black font-medium"
-                    >Google</span
-                  >
-                </div>
-                <div class="h-8 flex items-center">
-                  <span class="text-black dark:text-black font-medium"
-                    >Apple</span
-                  >
-                </div>
-                <div class="h-8 flex items-center">
-                  <span class="text-black dark:text-black font-medium"
-                    >Beebole</span
-                  >
-                </div>
-                <div class="h-8 flex items-center">
-                  <span class="text-black dark:text-black font-medium"
-                    >Deliverect</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <style>
   /* Add keyframes for additional animations if needed */
