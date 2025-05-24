@@ -12,10 +12,11 @@ const { name, fist_title, title, description, button, subtitle } = Astro.props;
   <div
     class="container-custom relative z-10 min-h-[80vh] lg-flex lg-items-center"
   >
-    <div class="grid md:grid-cols-3 gap-12 items-center">
+    <div class="grid md:grid-cols-4 gap-12 items-center">
       <div class="col-start-1 col-end-3 slide-up" transition:animate="slide">
         <h1 class="mb-6 text-white dark:text-white leading-tight">
           <span class="text-accent-500 dark:text-primary-400">{fist_title}</span>
+          <br>
           <span>
             {title}
           </span>
