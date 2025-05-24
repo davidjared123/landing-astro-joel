@@ -2,8 +2,50 @@
 const { name, fist_title, title, description, button, subtitle } = Astro.props;
 ---
 
-<section
-  class="bg-[url(../assets/Hero-sm.jpg)] md:bg-[url(../assets/Hero2.webp)] max-h-screen bg-cover  md-bg-position-right relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section"
+<section class="relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section  h-[90vh] md:h-[100vh]">
+  <!-- Video de fondo -->
+  <video
+    class="absolute top-0 left-0 w-full min-h-screen object-cover z-0"
+    src="../assets/hero-video.mp4"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+
+  <!-- Overlay para oscurecer el video si lo deseas -->
+  <div class="absolute top-0 left-0 w-full h-full dark:opacity-75 opacity-25 dark:bg-secondary-700 bg-secondary-500 z-10"></div>
+
+  <!-- Contenido principal -->
+  <div class="container-custom relative z-10 max-h-screen lg-flex lg-items-center overflow-hidden"
+>
+  <div class="grid md:grid-cols-4 gap-12 items-center">
+    <div class="col-start-1 col-end-3 slide-up" transition:animate="slide">
+      <h1 class="mb-6 text-white dark:text-white leading-tight">
+        <span class="text-accent-500 dark:text-primary-400">{fist_title}</span>
+        <br>
+        <span>
+          {title}
+        </span>
+      </h1>
+      <p
+        class="text-xl text-white dark:text-secondary-300 mb-8 max-w-lg"
+      >
+        {description}
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="/contact" class="btn-primary">{button} </a>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+</section>
+
+<!-- <section
+  class="bg-[url(../assets/hero.jpg)] md:bg-[url(../assets/Hero2.webp)] max-h-screen bg-cover  md-bg-position-right relative pt-32 pb-20 md:pt-40 overflow-hidden hero-section"
 >
   <div
     class="absolute top-0 left-0 w-full h-full dark:opacity-75 opacity-25 dark:bg-secondary-800 bg-secondary-400 z-0"
@@ -30,7 +72,7 @@ const { name, fist_title, title, description, button, subtitle } = Astro.props;
           <a href="/contact" class="btn-primary">{button} </a>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Teal section at the bottom with Trusted By -->
     <!-- <div class="mt-10 w-full overflow-hidden -z-10" transition:animate="slide">
@@ -80,9 +122,9 @@ const { name, fist_title, title, description, button, subtitle } = Astro.props;
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
-</section>
+</section> -->
 
 <style>
   /* Add keyframes for additional animations if needed */
