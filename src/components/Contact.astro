@@ -42,21 +42,32 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
         </h5>
         <ul class="list-disc pl-6 mb-6 text-gray-600 dark:text-gray-300 ">	
           <li>{options.OPTION_1_LIST.OPTION_1_1}</li>
-          <li>{options.OPTION_1_LIST.OPTION_1_2}</li>
-          <li>{options.OPTION_1_LIST.OPTION_1_3}</li>
-          <li>{options.OPTION_1_LIST.OPTION_1_4}</li>
         </ul>
         <h5 class="mb-6 text-gray-900 dark:text-white">
-          {options.OPTION_1}
+          {options.OPTION_2}
         </h5>
         <ul class="list-disc pl-6 mb-6 text-gray-600 dark:text-gray-300 ">	
           <li>{options.OPTION_2_LIST.OPTION_2_1}</li>
-          <li>{options.OPTION_2_LIST.OPTION_2_2}</li>
-          <li>{options.OPTION_2_LIST.OPTION_2_3}</li>
-          <li>{options.OPTION_2_LIST.OPTION_2_4}</li>
-          <li>{options.OPTION_2_LIST.OPTION_2_5}</li>
         </ul>
-
+        <h5 class="mb-6 text-gray-900 dark:text-white">
+          {options.OPTION_3}
+        </h5>
+        <ul class="list-disc pl-6 mb-6 text-gray-600 dark:text-gray-300 ">	
+          <li>{options.OPTION_3_LIST.OPTION_3_1}</li>
+        </ul>
+        <h5 class="mb-6 text-gray-900 dark:text-white">
+          {options.OPTION_4}
+        </h5>
+        <ul class="list-disc pl-6 mb-6 text-gray-600 dark:text-gray-300 ">	
+          <li>{options.OPTION_4_LIST.OPTION_4_1}</li>
+        </ul>
+        <h5 class="mb-6 text-gray-900 dark:text-white">
+          {options.OPTION_5}
+        </h5>
+        <ul class="list-disc pl-6 mb-6 text-gray-600 dark:text-gray-300 ">	
+          <li>{options.OPTION_5_LIST.OPTION_5_1}</li>
+        </ul>
+        
         <div class="space-y-6">
           <!-- <div class="flex items-start">
            
@@ -243,7 +254,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
                 id="question-1"
                 name="text"
                 class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                placeholder="Answer question"
+                placeholder="Chose one or more options"
                 required
               />
               <p
@@ -252,25 +263,7 @@ const NETLIFY_SITE_ID = import.meta.env.NETLIFY_SITE_ID;
               </p>
             </div>
 
-            <div class="mb-4">
-              <label
-                for="question-2"
-                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                >{form_question_2}</label
-              >
-              <input
-                type="text"
-                id="question-2"
-                name="text"
-                class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                placeholder="Answer question"
-                required
-              />
-              <p
-                class="text-red-500 text-sm mt-1"
-              >
-              </p>
-            </div>
+            
 
             <div class="mb-6">
               <label

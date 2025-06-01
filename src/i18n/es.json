@@ -26,8 +26,8 @@
         "FEATURES_ITEM_5_DESCRIPTION": "Aceptas, completas documentos, se realiza la valoración y pasamos al underwriting.",
         "FEATURES_ITEM_6_DESCRIPTION": "Mi equipo se encargará del título y seguro. Te contactaremos si falta algo para cerrar."
     },
-    "CONTACT_TITLE": "Solicitar Préstamo",
-    "CONTACT_DESCRIPTION": "Joel's Money es una empresa de préstamos personales que ofrece soluciones financieras a sus clientes.",
+    "CONTACT_TITLE": "¿Tienes un trato listo?",
+    "CONTACT_DESCRIPTION": "Accede al capital real para hacer que pase. Flips, rentas, depósitos… lo que necesites para cerrar.",
     "TESTIMONIALS_TITLE": "¿Que dicen nuestros clientes?",
     "TESTIMONIALS_DESCRIPTION": "No solo tome nuestra palabra. Aquí está lo que nuestros clientes tienen que decir sobre su experiencia con nuestra plataforma.",
      "TESTIMONIALS_SUBTITLE": "Historia de cliente",
@@ -47,20 +47,25 @@
     },
     "OPTIONS": {
         "TITLE": "Opciones de Préstamo",
-        "OPTION_1": "Financiamiento de Fix & Flips", 
+        "OPTION_1": "Depósito de Buena Fe (EMD - Earnest Money Deposit)", 
         "OPTION_1_LIST": {
-            "OPTION_1_1": "Proyecto Financiado: Obtén el 100% del precio de compra y los costos de rehabilitación cubiertos, hasta el 80% del ARV. Solo cubres los costos de cierre.",
-            "OPTION_1_2": "Fast Approvals: Receive your funds in just 48 to 72 hours.",
-            "OPTION_1_3": "No Credit Check Needed: Your credit score won’t impact your approval.",
-            "OPTION_1_4": "No Income Docs Required: Skip the paperwork — no income verification necessary."
+            "OPTION_1_1": "Te prestamos el dinero inicial para asegurar el trato mientras cierras la negociación. Ideal si necesitas actuar rápido y no quieres perder la oportunidad."
         },
-        "OPTION_2": "Financiamiento Cash-Out",
+        "OPTION_2": "Doble Cierre (Double Closing)",
         "OPTION_2_LIST": {
-            "OPTION_2_1": "Maximiza tu Capital: Retira hasta el 85% del valor de su propiedad.",
-            "OPTION_2_2": "Puntuación de Crédito Mínima: Se necesita un FICO de 640 o más.",
-            "OPTION_2_3": "Cierres Suaves: Normalmente se cierran dentro de 3 a 4 semanas.",
-            "OPTION_2_4": "No se Requieren Documentos de Ingresos: La verificación de ingresos no es parte del proceso.",
-            "OPTION_2_5": "Opciones de Pago Flexibles: Préstamos solo de interés disponibles en plazos de 5, 7 o 10 años."
+            "OPTION_2_1": "Usado cuando necesitas hacer dos cierres en una misma transacción. Tú compras y revendes casi al mismo tiempo, sin usar tu propio dinero."
+        },
+        "OPTION_3": "Reparar y Vender (Fix & Flip)",
+        "OPTION_3_LIST": {
+            "OPTION_3_1": "Préstamo para comprar, arreglar y revender una propiedad en poco tiempo."
+        },
+        "OPTION_4": "Renta a Largo Plazo (DSCR o DSR)",
+        "OPTION_4_LIST": {
+            "OPTION_4_1": "Para propiedades que vas a alquilar y que se pagan solas con la renta mensual."
+        },
+        "OPTION_5": "Préstamo Privado (PML - Private Money Lender)",
+        "OPTION_5_LIST": {
+            "OPTION_5_1": "Capital directo. Sin bancos. Sin procesos lentos. Rápido, simple y pensado para hacer que las cosas pasen."
         }
     },
     "FOOTER_TITLE": "¿Qué tipo de deals financiamos?",
@@ -79,7 +84,7 @@
         "FORM_CONTACT_TITLE": "Envíanos un Mensaje",
         "FORM_CONTACT_NAME": "Nombre",
         "FORM_CONTACT_EMAIL": "Correo Electronico",
-        "FORM_CONTACT_MESSAGE": "Mensaje",
+        "FORM_CONTACT_MESSAGE": "Cuéntanos mas sobre tu proyecto",
         "FORM_CONTACT_BUTTON": "Enviar Mensaje",
 
         "FORM_INFO_TITLE": "Nos Encanta Escucharte",
@@ -95,7 +100,5 @@
         "FORM_MODAL_SENT": "Mensaje Envíado",
         "FORM_MODAL_MESSAGE": "Gracias por escribirnos, te responderemos lo mas pronto posible!",
         "FORM_QUESTION_1": "Que tipo de préstamo te interesa?",
-        "FORM_QUESTION_1_TEXT": "Por favor selecciona el tipo de préstamo que te interesa.",
-        "FORM_QUESTION_2": "Cual es el propósito del préstamo?",
-        "FORM_QUESTION_2_TEXT": "Por favor proporciona una breve descripción del propósito del préstamo."
+        "FORM_QUESTION_1_TEXT": "Por favor selecciona el tipo de préstamo que te interesa."
 }

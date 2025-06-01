@@ -85,6 +85,8 @@ Custom animations are included:
 
 MIT
 
+Based on SaaSify project by Larry Xue
+
 ## 👀 Learn More
 
 - [Astro Documentation](https://docs.astro.build)

@@ -26,8 +26,8 @@
         "FEATURES_ITEM_5_DESCRIPTION": "You accept, complete documents, we do the appraisal and move to underwriting.",
         "FEATURES_ITEM_6_DESCRIPTION": "Our team will handle the title and insurance. We will contact you if anything is missing to close."
     },
-    "CONTACT_TITLE": "Request a Loan",
-    "CONTACT_DESCRIPTION": "Joel's money is funding Smart Real Estate Moves. If your deal makes sense, the money’s ready.",
+    "CONTACT_TITLE": "You have a deal ready?",
+    "CONTACT_DESCRIPTION": "Access real capital to make it happen. Flips, rentals, deposits… whatever you need to close.",
     "TESTIMONIALS_TITLE": "What Our Clients Say",
     "TESTIMONIALS_DESCRIPTION": "Don't just take our word for it. Here's what our customers have to say about their experience with our platform.",
     "TESTIMONIALS_SUBTITLE": "Costumer Story",
@@ -45,22 +45,30 @@
         "COMPANY_2": "Innovate Inc.",
         "COMPANY_3": "Global Solutions"
     },
-    "OPTIONS": {
+    "OPTIONS": {    
         "TITLE": "Loan Options",
-        "OPTION_1": "Fix and Flip Funding",
+        "OPTION_1": "Earnest Money Deposit (EMD)",
         "OPTION_1_LIST": {
-            "OPTION_1_1": "Full Project Financing: Get 100% of the purchase price and rehab costs covered — up to 80% of the ARV. You only cover closing costs.",
+            "OPTION_1_1": "We lend you the initial money to secure the deal while you close the negotiation. Ideal if you need to act fast and don’t want to miss the opportunity.",
             "OPTION_1_2": "Fast Approvals: Receive your funds in just 48 to 72 hours.",
             "OPTION_1_3": "No Credit Check Needed: Your credit score won’t impact your approval.",
             "OPTION_1_4": "No Income Docs Required: Skip the paperwork — no income verification necessary."
         },
-        "OPTION_2": "Cash-Out Refinance",
+        "OPTION_2": "Double Closing",
         "OPTION_2_LIST": {
-            "OPTION_2_1": "Maximize Your Equity: Pull out up to 85% of your property’s value.",
-            "OPTION_2_2": "Minimum Credit Score: A FICO of 640 or higher is needed.",
-            "OPTION_2_3": "Smooth Closings: Typically closed within 3 to 4 weeks.",
-            "OPTION_2_4": "No Income Docs Required: Income verification isn’t part of the process.",
-            "OPTION_2_5": "Flexible Payment Options: Interest-only loans available in 5, 7, or 10-year terms."
+            "OPTION_2_1": "Used when you need to do two closings in one transaction. You buy and resell almost at the same time, without using your own money."
+        },
+        "OPTION_3": "Fix & Flip",
+        "OPTION_3_LIST": {
+            "OPTION_3_1": "Loan to buy, fix, and resell a property in a short time."
+        },
+        "OPTION_4": "Rental Property Financing (DSCR o DSR)",
+        "OPTION_4_LIST": {
+            "OPTION_4_1": "For properties you will rent out that pay for themselves with monthly rent."
+        },
+        "OPTION_5": "Private Money Lender (PML)",
+        "OPTION_5_LIST": {
+            "OPTION_5_1": "Direct capital. No banks. No slow processes. Fast, simple, and designed to make things happen."
         }
     },
 
@@ -79,7 +87,7 @@
         "FORM_CONTACT_TITLE": "Send Us a Message",
         "FORM_CONTACT_NAME": "Name",
         "FORM_CONTACT_EMAIL": "Email",
-        "FORM_CONTACT_MESSAGE": "Message",
+        "FORM_CONTACT_MESSAGE": "Tell us more about your project",
         "FORM_CONTACT_BUTTON": "Send Message",
 
         "FORM_INFO_TITLE": "We'd Love to Hear From You",
