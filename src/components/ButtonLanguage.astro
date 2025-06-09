@@ -1,20 +1,27 @@
 ---
 import { getI18n } from "../i18n";
-
+const { currentLocale, url } = Astro;
+const i18n = getI18n({ currentLocale });
 
   // const handleLanguageChange = (locale) => {
   //   currentLocale = locale;
   //   translations = getI18n({ currentLocale: locale });
   //   updateUI();
   // };
-  const { currentLocale } = Astro;
-const i18n = getI18n({ currentLocale });
 
   console.log(i18n)
   console.log(`firstTranslation`) 
+
+  let newHref = "";
+if (currentLocale === "es") {
+  newHref = "/en" + url.pathname;
+} else {
+  // Elimina el prefijo /en de la ruta
+  newHref = url.pathname.replace(/^\/en/, "") || "/";
+}
 ---
 
 
 <div>
-  <a class="font-bold text-secondary-500 hover:text-secondary-600 dark:text-primary-100 dark:hover:text-secondary-500" href=`${i18n.set_LANG}`>{i18n.set_lang}</a>
+  <a class="font-bold text-secondary-500 hover:text-secondary-600 dark:text-primary-100 dark:hover:text-secondary-500" href=`${newHref}`>{i18n.set_lang}</a>
 </div>
